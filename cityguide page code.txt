@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Telangana City Guide - City Guide Reviews</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: lightseagreen;
+      background-size: cover;
+      overflow: hidden;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .review {
+      margin-bottom: 20px;
+    }
+
+    .review h4 {
+      margin-top: 0;
+    }
+
+    .author {
+      font-style: italic;
+    }
+
+    footer {
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .footer .copy {
+      width: 50%;
+    }
+
+    .footer .bottom-links {
+      display: flex;
+      align-items: center;
+      width: 50%;
+    }
+
+    .footer .bottom-links span {
+      margin-right: 10px;
+    }
+
+    .footer a {
+      color: white;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    .fab {
+      margin-right: 5px;
+    }
+
+    .footer .bottom-links .emoji {
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div class="review">
+        <h3>City Guide Reviews</h3>
+        <ul>
+          <li>
+            <div class="review">
+              <h4>Amazing City Guide</h4>
+              <p>This city guide provided all the necessary information and made our trip memorable. We visited all the famous landmarks and enjoyed the local cuisine. Highly recommended!</p>
+              <span class="author">John Smith</span>
+            </div>
+          </li>
+          <li>
+            <div class="review">
+              <h4>Excellent Recommendations</h4>
+              <p>The city guide helped us explore hidden gems and experience the local culture. The suggested attractions and restaurants were fantastic. We had a great time thanks to this guide!</p>
+              <span class="author">Jane Doe</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="copy">&copy; 2023 City Guide Website - The Helping Hand</div>
+    <div class="bottom-links">
+      <div class="links">
+        <span>More Info</span>
+        <a href="#">Website Developed by Sneha, Anshu, Manisai, Shanth</a>
+      </div>
+      <div class="links">
+        <span>Social Links</span>
+        <!-- Add emojis for Facebook, Twitter, and Instagram -->
+        <a href="#"><i class="fab fa-facebook"></i> <span class="emoji">&#x1F4F1;</span></a>
+        <a href="#"><i class="fab fa-twitter"></i> <span class="emoji">&#x1F426;</span></a>
+        <a href="#"><i class="fab fa-instagram"></i> <span class="emoji">&#x1F3F7;</span></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

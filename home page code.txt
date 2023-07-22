@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Telangana City Guide - Home</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("bg.jpg"); /* Replace "path/to/your/image.jpg" with the actual path to your image */
+      background-size: cover;
+      overflow:visible; /* Prevent scrollbars */
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 20px;
+      overflow:hidden;
+      background-color:black;
+      width: 100%;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    ul {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+    /* Change the link color to #111 (black) on hover */
+    li a:hover {
+      background-color:lightsalmon   }
+    
+    .intro {
+      width: 500px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px auto;
+    }
+    
+    .box {
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 4px;
+      width: 100%;
+    }
+    
+    .header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+    }
+
+    .nav-items {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    main {
+      margin-top:60px;
+      padding: 20px;
+      color: #333;
+    }
+    
+    h1 {
+      margin-top: auto;
+    }
+    
+    table {
+      display: none;
+      margin-top: 50px;
+      border-collapse: collapse;
+      width:100%;
+      max-width:900%;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+    }
+    
+    table.visible {
+      display: table;
+    }
+    
+    table caption {
+      font-weight: bold;
+      padding: 10px;
+      text-align: left;
+      background-color: #333;
+      color: white;
+    }
+    
+    table th,
+    table td {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+     footer {
+      padding: 20px;
+      background-color: #333; /* Choose your desired background color */
+      color: white;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    footer div {
+      width: 45%;
+    }
+  </style>
+  <script>
+    window.addEventListener("scroll", function() {
+      var table = document.getElementById("tourist-places-table");
+      var tableRect = table.getBoundingClientRect();
+      
+      if (tableRect.top < window.innerHeight) {
+        table.classList.add("visible");
+      } else {
+        table.classList.remove("visible");
+      }
+    });
+  </script>
+</head>
+ <header class="header">
+    <nav class="nav-items">
+      <ul>
+        <li><a href="reg.html">Home</a></li>
+                        <li><a href="3c.html">places weather conditions</a></li>
+
+        <li><a href="city_guide.html">City Guide Reviews</a></li>
+      </ul>
+    </nav>
+  </header>
+<body>
+
+  <main>
+    <div class="intro">
+      <h1>Welcome to Telangana</h1>
+      <div class="box">
+        <p>Telangana is known for its diverse culture, languages, and traditions. The official language of the state is Telugu, but Urdu is also widely spoken. The people of Telangana are known for their hospitality and warmth. The state is known for its historical and architectural marvels. Some popular tourist attractions in Telangana include the historic Charminar, Golconda Fort, Qutub Shahi Tombs, and the iconic Chowmahalla Palace in Hyderabad. The Ramoji Film City, the world's largest integrated film city, is also a major tourist attraction.</p>
+        <button id="more-info-btn">Learn More</button>
+      </div>
+    </div>
+
+    <div id="city-guide-info" style="display: none;">
+      <h2>More about City Guide</h2>
+      <p>Telangana is a state in southern India with several cities that offer unique experiences and attractions. Here is a city guide to some of the prominent cities in Telangana:</p>
+        <li>
+          <strong>Hyderabad:</strong> As the capital city of Telangana, Hyderabad is a major cultural and economic hub. It is known for its historical landmarks, including the iconic Charminar, Golconda Fort, and Qutub Shahi Tombs. The city is also famous for its delectable cuisine, especially the world-renowned Hyderabadi Biryani. Other attractions in Hyderabad include the picturesque Hussain Sagar Lake, Ramoji Film City, Salar Jung Museum, and the modern IT hub of HITEC City.
+        </li>
+        <li>
+          <strong>Warangal:</strong> Located around 150 kilometers northeast of Hyderabad, Warangal is a historically significant city. It was the capital of the Kakatiya dynasty, and its impressive ruins, such as the Warangal Fort, Thousand Pillar Temple, and Ramappa Temple, are UNESCO World Heritage sites. The city also offers scenic attractions like the Pakhal Lake and the beautiful Kakatiya Rock Garden.
+        </li>
+        <li>
+          <strong>Nizamabad:</strong> Situated in the northwest region of Telangana, Nizamabad is known for its architectural marvels and historical significance. The Nizamabad Fort, built during the Rashtrakuta dynasty, is a major attraction. The city also houses the popular Ali Sagar Reservoir, Nizamabad Archaeological Museum, and the historic Dichpally Ramalayam temple.
+        </li>
+    </div>
+
+    <table id="tourist-places-table">
+      <caption>Famous Tourist Places in Telangana</caption>
+      <thead>
+        <tr>
+          <th>Place</th>
+          <th>Description</th>
+          <th>image</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Charminar</td>
+          <td>The iconic monument located in Hyderabad.
+			  Monument
+		  </td>
+           <td><span id="charminar-weather"></span></td>
+          <td><img src="charminar.jpg" alt="Charminar Image" width="300"></td>
+        </tr>
+        </tr>
+        <tr>
+          <td>Golconda Fort</td>
+          <td>A historic fort known for its architectural grandeur.
+			  Fort
+		  </td>
+          <td><span id="Golconda-weather"></span></td>
+          <td><img src="Golconda.jpg" alt="Golconda image" width="300"></td>
+        </tr>
+        <tr>
+          <td>salar jung museum</td>
+          <td>An art museum in hyderabad</td>
+          <td><span id="salar jung museum-eather"></span></td>
+          <td><img src="slr.jpg" alt="salar jung museum image " width="300"</td>
+        </tr>
+        <tr>
+          <td>Ramoji film city</td>
+          <td> A film studio complex in Hyderabad
+			  Entertainment
+		  </td>
+           <td><span id="Ramoji film city-weather"></span></td>
+          <td><img src="rmj.jpg" alt="Ramoji film city Image" width="300"</td>
+        </tr>
+        <tr>
+          <td>warangal fort</td>
+          <td>a fortness in warangal
+			  Fort
+		  </td>
+           <td><span id="warangal fort-weather"></span></td>
+          <td><img src="warangal.jpg" alt="fort Image" width="300"></td>
+        </tr>
+        <tr>
+          <td>Bhongir fort</td>
+          <td> A hilltop fort at hyderabad
+			  Fort
+		  </td>
+           <td><span id="bhongir-weather"></span></td>
+          <td><img src="bh.jpg" alt="bhongir Image" width="300"></td>
+        </tr>
+        <tr>
+          <td>Mallela Teertham</td>
+          <td>A waterfall in nallamala Forest
+			  Fort
+		  </td>
+           <td><span id="Mallela Teertham-weather"></span></td>
+          <td><img src="Mallela teertham.jpg" alt="Mallela Teertham Image" width="300"></td>
+        </tr>
+        <tr>
+          <td>Nizamabad fort</td>
+          <td>A fort in nizamabad
+			  Fort view
+		  </td>
+           <td><span id="Nizamabad-weather"></span></td>
+          <td><img src="Nizamabad Fort.jpg" alt="Nizamabad Image" width="300"></td>
+        </tr>
+        <tr>
+          <td>Pakhal Lake</td>
+          <td>A man-made lake in Warangal
+			  Lake View
+		  </td>
+           <td><span id="Pakhal Lake-weather"></span></td>
+          <td><img src="Pk.jpg" alt="Pakhal Lake Image" width="300"></td>
+        </tr>
+        <tr>
+          <td>Kinnerasani Wildlife Sanctuary</td>
+          <td> A wildlife sanctuary in Khammam.
+			  Wildlife
+		  </td>
+           <td><span id="Kinnerasani Wildlife Sanctuary-weather"></span></td>
+          <td><img src="kn.jpg" alt="Kinnerasani Wildlife Sanctuary Image" width="300"></td>
+        </tr>
+        <tr>
+          <td>Kuntala Waterfall</td>
+          <td>A waterfall in Adilabad.
+			  Nature
+		  </td>
+           <td><span id="Kuntala Waterfall-weather"></span></td>
+          <td><img src="kuntala.jpg" alt="Kuntala Waterfal Image" width="300"></td>
+        </tr>
+        <tr>
+          <td> Nagarjuna Sagar Dam</td>
+          <td> A masonry dam on Krishna River.
+			  Dam
+		  </td>
+           <td><span id=" Nagarjuna Sagar Dam-weather"></span></td>
+          <td><img src="ng.jpg" alt=" Nagarjuna Sagar Dam Image" width="300"></td>
+        </tr>
+        <tr>
+          <td>Bhadrachalam Temple</td>
+          <td> A Hindu temple in Bhadrachalam.
+			  Temple
+		  </td>
+           <td><span id="Bhadrachalam Temple-weather"></span></td>
+          <td><img src="bdp.jpg" alt="Bhadrachalam Temple Image" width="300"></td>
+        </tr>
+        <tr>
+          <td>Pochampally Handloom Park</td>
+          <td>A handloom park in Pochampally
+			  Handycrafts
+		  </td>
+           <td><span id="Pochampally Handloom Park-weather"></span></td>
+          <td><img src="pcp.jpg" alt="Pochampally Handloom Park Image" width="300"></td>
+        </tr>
+        <tr>
+          <td> Medak Cathedral</td>
+          <td> A cathedral in Medak.
+			  Religious place
+		  </td>
+           <td><span id=" Medak Cathedral-weather"></span></td>
+          <td><img src="medak.jpg" alt=" Medak CathedralImage" width="300"></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+  <footer>
+    <div>
+      <h3>About Us</h3>
+      <p>Welcome to our website!
+		   We are dedicated team passionate about providing valuable information and resources to our users. Our mission is to create platform that helps individuals explore and discover new places, experiences, and cultures .
+
+Through our city guides, we aim to showcase the unique attractions, historical landmarks, delicious cuisine, and vibrant culture of various cities, including Telangana. Whether you are a local resident or a traveler visiting the region, our city guide will serve as your companion to navigate and make the most of your time in Telangana.</p>
+    </div>
+    <div>
+      <h3>Contact Us</h3>
+      <p>Email: sams@gmail.com</p>
+      <p>Phone: 8674327289</p>
+      <p>Address: Keshava Memorial institute of technology</p>
+       <div class="contact-form">
+    <h3>Contact Form</h3>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+      
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("more-info-btn").addEventListener("click", function() {
+      var cityGuideInfo = document.getElementById("city-guide-info");
+      if (cityGuideInfo.style.display === "none") {
+        cityGuideInfo.style.display = "block";
+        this.textContent = "Hide";
+      } else {
+        cityGuideInfo.style.display = "none";
+        this.textContent = "Learn More";
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)http://localhost:8082/First_project/registration.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title>Telangana City Guide - Registration</title>
+  <style>
+	   body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url("image1.jpg"); /* Replace "path/to/your/image.jpg" with the actual path to your image */
+      background-size: cover;
+      overflow: hidden;
+    }
+
+    .container {
+      width: 400px;
+      padding: 40px;
+      background-color: #ffffff;
+      border-radius: 8px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-group input[type="submit"] {
+      background-color: #4caf50;
+      color: #ffffff;
+      cursor: pointer;
+    }
+
+    .form-group input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+  
+  <script>
+    function validateForm() {
+      var username = document.getElementById("username").value;
+      
+      if (username === "") {
+        alert("Registration failed: Please enter your username.");
+        return false;
+      }
+      
+      // You can add additional validation rules for name, email, and password if needed
+      alert("Registration success!");
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h2>User Registration</h2>
+    <form onsubmit="return validateForm()" action="http://localhost:8082/First_project/reg.html" method="post">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required="" fdprocessedid="l6m7nj">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required="" fdprocessedid="5n6bn">
+      </div>
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required="" fdprocessedid="j1kc7v">
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required="" fdprocessedid="b9rm88">
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Register" fdprocessedid="gfnefm">
+      </div>
+    </form>
+  </div>
+
+
+</body></html>
